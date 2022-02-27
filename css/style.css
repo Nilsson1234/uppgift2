@@ -8,6 +8,7 @@ html, body {
     height: 100%;
     margin: 0;
 }
+/* Har kopierat från dina labbexmpel, därmed är vissa kommentar likadana */
 
 /* Ta bort inbyggda marginaler och ändra box-sizing
  */
@@ -20,7 +21,7 @@ html, body, nav, header, main, article, aside, footer, section, div {
 body {
     background-color: #eeeadd;
     color: #000000;
-    max-width: 800px; /* Sidorna begränsas till 800 pixlar ... */
+    max-width: 800px; 
     margin: 0 auto; 
     padding: 0 8px;
     font-family: Arial, Helvetica, sans-serif;
@@ -91,10 +92,10 @@ header {
 }
 
 #frontPageHeader { /* Används endast på den första sidan i index.html */
-    background-image: url(../img/clouds.jpg);
+    background-image: url(../img/pexels-yogendra-singh-1462640.jpg);
     background-size: cover;
-    background-position: bottom;
-    height: 220px;
+    background-position: top;
+    height: 255px;
 }
 
 header h1 {
@@ -108,8 +109,9 @@ header h1 {
 .uppgift2bg {
     background-image: url("../img/forest-7023487_1920.jpg");
     background-image: traqn;
-    background-repeat: repeat-y;
+    background-repeat: repeat;
     background-attachment: fixed;
+    background-size: cover;
     }
 
 main ul {
