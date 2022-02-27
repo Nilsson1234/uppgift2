@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppgift 2 - Boxmodellen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="uppgift2bg">
+    <label for="menucheckbox" id="menuicon"></label>
+    <input type="checkbox" id="menucheckbox">
+    <nav id="globnav">
+        <ul>
+            <li><a href="index.html">Uppgift2</a></li>
+            <li><a href="Boxmodellen.html" class="thisPage">Boxmodellen</a></li>
+            <li><a href="Navigering.html">Navigering</a></li>
+            <li><a href="kravspecifikation.html">kravspecifikation</a></li>
+            <li><a href="alternativ/index.html">Alternativ</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Boxmodellen</h1>
+    </header>
+    <main>
+        <h2>Beskriv boxmodellen och ge en kort förklaring av var och en av de CSS-egenskaper som ingår i den.</h2>
+        <p>Boxmodellen,Boxmodellen,Boxmodellen</p>
+        
+        <h4>Content </h4>
+        <ul>
+            Content är själva innehållet i boxen.
+        </ul>
+        <h4>
+            Inner edges
+        </h4>
+        <ul>Är kanterna på innehållsområdet kallas de inre kanterna på</ul>
+        <h4>
+            Padding
+        </h4>
+        <ul>
+            Är Utfyllnaden på det område som hålls mellan innehållsområdet och en valfrigräns. Padding är valfritt och görs vid behov.
+        </ul>
+        <h4>Border</h4>
+        <ul>Border är en linje (eller stiliserad linje) som omger elementet och dess
+        Paddings. Border är också valfri.
+        </ul>
+        <h4>
+            Margin
+        </h4>
+        <ul>
+        Margin är en valfri mängd utrymme som läggs till på utsidan av gräns.
+        </ul>
+        <h4>
+        Outer edge
+        </h4>
+        <ul>Outer edge av margin området utgör elementets yttre kanter
+            låda. Detta är den totala yta som elementet tar upp på sidan, och det
+            inkluderar bredden på innehållsområdet plus den totala mängden utfyllnad,
+            kant, och marginaler tillämpas på elementet.
+            </ul>
+            <figure class="imgcol">
+                <img src="img/Css_box_model.svg.png" alt="css box model">
+                <figcaption><a href="https://commons.wikimedia.org/wiki/File:Css_box_model.svg">Felix.leg</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption>
+            </figure>
+        <h2>Beskriv också skillnaden mellan värdena content-box och border-box för CSS-egenskapen box-sizing.</h2>
+        <p>I content box som är det gamla sättet så är resultatet av storleken för elementet som du sätter på det, och padding och border som man lägger till blir utöver den storleken och läggs på.</p>
+        <p>Den nyare metoden “box-sizing” räknas dessa variabler till in till box sizing totala storlek. Vilket gör det enklare att jobba med. Då storleken på boxen inte blir större än det man först angav för boxen. Oavsett om man ändrar padding eller border.</p>
+        <div class="gallerybox">
+            <figure class="imgcol">
+                <img src="img/tin-can-2634977_1280.jpg" alt="tin-can">
+            </figure>
+            <figure class="imgcol">
+                <img src="img/Boxmodel-html.png" alt="boxmodellen">
+                <figcaption><a href="https://commons.wikimedia.org/wiki/File:Boxmodel-html.png">Inseritore</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
+                </figcaption>
+            </figure>
+            <figure class="imgcol">
+                <img src="img/CSS-Box-Modell2.png" alt="Domkyrkan i Växjö">
+                <figcaption><a href="https://commons.wikimedia.org/wiki/File:CSS-Box-Modell.png">Bagok</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption>
+            </figure>
+        </div>
+       
+    </main>
+    <footer>
+        Webbplats för test i kursen Webbteknik 1 vid Linnéuniversitetet.
+    </footer>
+</body>
+</html>
