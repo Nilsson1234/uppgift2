@@ -8,10 +8,9 @@ html, body {
     height: 100%;
     margin: 0;
 }
-/* Har kopierat från dina labbexmpel, därmed är vissa kommentar likadana */
+/* Har kopierat delar från dina labbexmpel, därmed är vissa kommentar se likadana */
 
-/* Ta bort inbyggda marginaler och ändra box-sizing
- */
+/* Ta bort inbyggda marginaler och ändra box-sizing*/
 html, body, nav, header, main, article, aside, footer, section, div {
     margin: 0;
     padding: 0;
@@ -103,7 +102,9 @@ header h1 {
     text-decoration: underline;
     text-decoration-thickness: 2px
 }
-
+li {list-style-type:disc;
+    color: bl
+}
 dt {
     font-weight: bold;
     color: #004100;
@@ -159,60 +160,61 @@ figcaption {
 
 .gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: auto;
-    grid-gap: 20px;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr;
 }
 
 .gallery1 { /* Används på startsidan, index.html */
     display: grid;
+    max-width: 800px;
     grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto;
+    grid-template-rows: minmax(100px, 2fr) minmax(100px, 1fr);
     grid-template-areas:
-    "img1 img2"
     "img1 img3"
-    "img1 img4";
+    "img2 img4";
 }
 
 .gallerybox { /* Används på boxmodellen sidan */
     max-width: 800px;
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 2%;
-    width: 100%;
-    
+    grid-template-rows: 1fr min-content;
+    grid-template-areas:
+    "img2 img3"
+    "img1 img1" ;
 }
 .imgcol {
     opacity: 0.8;
 }
-.gallery2 { /* Används på övriga sidor */
-    max-width: 600px;
-    margin: 0 auto;
-    grid-template-areas:
-    "img1 img1 img3"
-    "img2 img2 img3";
-}
-.gallerynav { /* Används på övriga sidor */
+.gallerykrav { /* Används på övriga sidor */
     max-width: 800px;
     margin: 0 auto;
+    grid-template-columns: minmax(200px 1fr) minmax(200px 1fr);
     grid-template-areas:
-    "img1 img3 img3"
-    "img2 img3 img3";
+    "img1 img2"
+    "img3 img2";
+}
+.gallerynav { /* Används på navigering sidan */
+    max-width: 800px;
+    margin: 0 0 0;
+    grid-template-columns: 1fr 1fr ; 
+    grid-template-areas:
+    "img1 img3"
+    "img2 img2";
 }
 
-.gallery div:nth-of-type(1) {
+.gallery figure:nth-of-type(1) {
     grid-area: img1;
 }
-.gallery div:nth-of-type(2) {
+.gallery figure:nth-of-type(2) {
     grid-area: img2;
 }
-.gallery div:nth-of-type(3) {
+.gallery  figure:nth-of-type(3) {
     grid-area: img3;
 }
-.gallery div:nth-of-type(4) {
+.gallery figure:nth-of-type(4) {
     grid-area: img4;
 }
+
 
 .gallery img {
     width: 100%; /* Bilden fyller ut hela rutan */
@@ -228,16 +230,24 @@ figcaption {
     background-image: url("../img/pexels-gdtography-911738.jpg");
     background-repeat: repeat-y;
     background-attachment: fixed;
-    }
+}
 
-.flex {
+/* Stil frö disply:flex sidan*/
+.flexRow {
+    display: -ms-flexbox; /* IE10 */
     display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    width: 600px;
-    gap: 10px;
-    gap: 10px 20px; /* row-gap column gap */
-    row-gap: 10px;
-    column-gap: 20px;
+}
+.flexColumn {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+}
+.flexColumn img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
 
 .train-image {
@@ -260,7 +270,6 @@ figcaption {
     ;
 }
 div.transform1 {
-
     position: relative;
     max-width: 40%;
     width: 284px;
@@ -310,7 +319,6 @@ aside section { /* Stil för sidorutan */
     padding: 15px;
     margin-left: 2rem;
     background-color: rgba(29, 7, 7, 0.3);
-
 }
 
 
@@ -338,6 +346,11 @@ aside section { /* Stil för sidorutan */
         flex-shrink: 0;
         flex-grow: 1;
     }
+    .flexColumn {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
 
 }
 
@@ -451,6 +464,10 @@ aside section { /* Stil för sidorutan */
         background-color: rgba(29, 7, 7, 0.3);
 
     }
-    
+    .flexColumn {  
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 65%;
+        padding: 0 4px;
+    }
 }
-
