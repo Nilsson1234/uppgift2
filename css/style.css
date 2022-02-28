@@ -102,8 +102,9 @@ header h1 {
     text-decoration: underline;
     text-decoration-thickness: 2px
 }
-li {list-style-type:disc;
-    color: bl
+/* För boxbodelen lista*/
+main ul li {
+    list-style-type:disc;
 }
 dt {
     font-weight: bold;
