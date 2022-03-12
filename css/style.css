@@ -189,7 +189,7 @@ figcaption {
 .gallerykrav { /* Används på övriga sidor */
     max-width: 800px;
     margin: 0 auto;
-    grid-template-columns: minmax(200px 1fr) minmax(200px 1fr);
+    grid-template-columns:1fr 1fr;
     grid-template-areas:
     "img1 img2"
     "img3 img2";
@@ -235,13 +235,10 @@ figcaption {
 
 /* Stil frö disply:flex sidan*/
 .flexRow {
-    display: -ms-flexbox; /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
 }
 .flexColumn {
-    -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
 }
@@ -348,7 +345,6 @@ aside section { /* Stil för sidorutan */
         flex-grow: 1;
     }
     .flexColumn {
-    -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
     padding: 0 4px;
@@ -466,9 +462,9 @@ aside section { /* Stil för sidorutan */
 
     }
     .flexColumn {  
-        -ms-flex: 25%; /* IE10 */
         flex: 25%;
         max-width: 65%;
         padding: 0 4px;
     }
+}
 }
