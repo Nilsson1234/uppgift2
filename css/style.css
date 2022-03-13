@@ -355,16 +355,16 @@ aside section { /* Stil för sidorutan */
 @media screen and (min-width:800px) {
     /* Layout med grid i tre kolumner */
     body {
-        max-width: none; /* Ta bort tidigare val */
+        max-width: 1000px; /* Ta bort tidigare val */
         padding: 0;
         display: grid;
-        grid-template-columns: auto 100px minmax(300px,900px) 200px auto;
+        grid-template-columns: auto 10px  minmax(300px,900px) 200px auto;
         grid-template-rows: min-content min-content auto 50px;
         gap: 1rem;
         grid-template-areas:
             "header header  header header header"
             ".      .       locnav .      ."
-            ".      globnav main   aside  ."
+            "globnav .      main   aside  ."
             "footer footer  footer footer footer";
     }
     
@@ -394,6 +394,7 @@ aside section { /* Stil för sidorutan */
     #globnav {
         grid-area: globnav;
         font-size: 0.8rem;
+        margin-left: 10px;
     }
 
     #globnav ul {
@@ -466,5 +467,15 @@ aside section { /* Stil för sidorutan */
         max-width: 65%;
         padding: 0 4px;
     }
+}
+@media screen and (min-width:1200px) {
+
+    body {
+        max-width: 1300px; 
+    }
+    #globnav {
+        font-size: 1.2rem;
+    }
+
 }
 }
