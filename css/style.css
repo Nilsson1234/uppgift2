@@ -168,7 +168,7 @@ figcaption {
 .gallery1 { /* Används på startsidan, index.html */
     display: grid;
     max-width: 800px;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr); 
     grid-template-rows: minmax(100px, 2fr) minmax(100px, 1fr);
     grid-template-areas:
     "img1 img3"
@@ -177,7 +177,7 @@ figcaption {
 
 .gallerybox { /* Används på boxmodellen sidan */
     max-width: 800px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
     grid-template-rows: 1fr min-content;
     grid-template-areas:
     "img2 img3"
@@ -189,7 +189,7 @@ figcaption {
 .gallerykrav { /* Används på övriga sidor */
     max-width: 800px;
     margin: 0 auto;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:minmax(250px, 1fr) minmax(250px, 1fr);
     grid-template-areas:
     "img1 img2"
     "img3 img2";
@@ -197,7 +197,7 @@ figcaption {
 .gallerynav { /* Används på navigering sidan */
     max-width: 800px;
     margin: 0 0 0;
-    grid-template-columns: 1fr 1fr ; 
+    grid-template-columns:minmax(250px, 1fr) minmax(250px, 1fr); 
     grid-template-areas:
     "img1 img3"
     "img2 img2";
